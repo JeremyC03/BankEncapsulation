@@ -7,16 +7,18 @@
             BankAccount myAccount = new BankAccount();
 
             Console.WriteLine("Please enter the amount you wish to deposit.");
-            myAccount.Deposit(100);
-            Console.WriteLine("You deposited $100.");
+            double dInput = double.Parse(Console.ReadLine());
+            myAccount.Deposit(dInput);
+            Console.WriteLine($"You deposited ${dInput}.");
             double currentBalance = myAccount.GetBalance();
             Console.WriteLine($"Current balance in account is: ${currentBalance}.");
 
             Console.WriteLine();
 
             Console.WriteLine("Please enter the amount you wish to withdraw.");
-            myAccount.Withdraw(25);
-            Console.WriteLine("You withdrew $25.");
+            double wInput = double.Parse(Console.ReadLine());
+            myAccount.Withdraw(wInput);
+            Console.WriteLine($"You withdrew ${wInput}.");
             double newCurrentBalance = myAccount.GetBalance();
             Console.WriteLine($"Current balance in account is: ${newCurrentBalance}.");
 
